@@ -1,6 +1,17 @@
-'use strict';
-let name = prompt('Anna nimi :---DD');
-let number, example;
-number = Math.log10(10);
-document.querySelector('#target').innerHTML = 'Haista paska, ' + name + number +
-    example;
+let year = 0
+if (year % 4 === 0) {
+  if (year % 100 === 0) {
+    if (year % 400 === 0) {
+      document.querySelector(
+          '#target').innerHTML = `Year ${leap} is leap year.`;
+    } else {
+      document.querySelector(
+          '#target').innerHTML = `Year ${year} is not leap year.`;
+    }
+  } else {
+    document.querySelector('#target').innerHTML = `Year ${year} is leap year.`;
+  }
+} else {
+  document.querySelector(
+      '#target').innerHTML = `Year ${year} is not leap year.`;
+}
