@@ -14,9 +14,9 @@ while (throws <= test_throws) {
   let sum_of_eyes = 0;
   for (let dice_thrown = 1; dice_thrown <= num_of_dices; dice_thrown++) {
     sum_of_eyes += Math.floor(Math.random() * 6) + 1;
-    if (sum_of_eyes === goal_eye_number) {
-      successful_throws += 1;
-    }
+  }
+  if (sum_of_eyes === goal_eye_number) {
+    successful_throws += 1;
   }
   throws += 1;
 }
