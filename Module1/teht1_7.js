@@ -6,7 +6,7 @@ let throws = 0;
 let result = 0;
 
 while (throws <= amount) {
-  result += Math.floor(Math.random() * 7);
+  result += Math.floor(Math.random() * 6) + 1;
   throws += 1;
 }
 

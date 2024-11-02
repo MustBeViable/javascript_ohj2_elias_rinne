@@ -2,7 +2,7 @@
 
 let num = +prompt('Give a number');
 
-let i = 0;
+let i = 2;
 
 let prime = false;
 
