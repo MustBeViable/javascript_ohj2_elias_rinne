@@ -1,0 +1,41 @@
+body {
+    background-color: ivory;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+div {
+    margin: auto;
+    width: 60%;
+    background: linear-gradient(90deg, #b3b3b3, #999999, #828282, #828282, #999999, #b3b3b3);
+    background-size: 10000% 10000%;
+    animation: gradientAnimation 20s ease-out infinite;
+}
+
+div > ul > li {
+    color: #fdfafa;
+    width: 10rem;
+    display: block;
+    text-align: center;
+    line-height: 3rem;
+    text-decoration: none;
+}
+
+div>ul>li:hover {
+    transform: scale(120%);
+}
+
+div>ul>li>a {
+    text-decoration: none;
+    color: black;
+}
