@@ -1,17 +1,26 @@
-let year = 0
-if (year % 4 === 0) {
-  if (year % 100 === 0) {
-    if (year % 400 === 0) {
-      document.querySelector(
-          '#target').innerHTML = `Year ${leap} is leap year.`;
-    } else {
-      document.querySelector(
-          '#target').innerHTML = `Year ${year} is not leap year.`;
-    }
-  } else {
-    document.querySelector('#target').innerHTML = `Year ${year} is leap year.`;
-  }
-} else {
-  document.querySelector(
-      '#target').innerHTML = `Year ${year} is not leap year.`;
+'use strict';
+
+let numbers = [10, 5, 3, 4, 6, 2];
+
+for (let i of numbers) {
+  console.log(i);
 }
+
+numbers.sort((a, b) => a - b);
+
+for (let i of numbers) {
+  console.log(i);
+}
+
+let student2 = {
+  firstName: 'Ahmed',
+  lastName: 'Hussein',
+  credits: 175,
+  hasLeft: function() {
+    return 240 - this.credits;
+  },
+};
+
+console.log(
+    'Student ' + student2.firstName + ' is missing ' + student2.hasLeft() +
+    ' credits.');
