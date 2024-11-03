@@ -15,7 +15,7 @@ while (right_sum === false) {
   let li = document.createElement('li');
   li.textContent = `${num_of_roll}. throw was ${num}.`;
   unord.appendChild(li);
-  num_of_roll++
+  num_of_roll++;
   if (num === 6) {
     right_sum = true;
   }

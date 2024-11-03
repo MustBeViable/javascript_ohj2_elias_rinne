@@ -4,8 +4,7 @@ const roll_a_dice = (max_number) => {
   return Math.floor((Math.random() * max_number) + 1);
 };
 
-
-let max_eye_count = +prompt('Give a max amount of sides for dice')
+let max_eye_count = +prompt('Give a max amount of sides for dice');
 
 let right_sum = false;
 
@@ -18,7 +17,7 @@ while (right_sum === false) {
   let li = document.createElement('li');
   li.textContent = `${num_of_roll}. throw was ${num}.`;
   unord.appendChild(li);
-  num_of_roll++
+  num_of_roll++;
   if (num === max_eye_count) {
     right_sum = true;
   }
