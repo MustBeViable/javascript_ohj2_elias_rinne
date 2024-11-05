@@ -1,19 +1,9 @@
 'use strict';
 
-const li1 = document.createElement('li');
-li1.innerHTML = 'First item';
-const li2 = document.createElement('li');
-li2.innerHTML = 'Second item';
-
-//kokeilin toista tapaa
-
-const li3 = document.createElement('li');
-li3.textContent = 'Third item';
 
 const ul = document.querySelector('#target');
 
-ul.appendChild(li1);
-ul.appendChild(li2);
-ul.appendChild(li3);
-
+ul.innerHTML += '<li>First item</li>'
+ul.innerHTML += '<li>Second item</li>'
+ul.innerHTML += '<li>Third item</li>'
 document.getElementById('target').classList.add('my-list');
