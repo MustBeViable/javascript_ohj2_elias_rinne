@@ -25,12 +25,6 @@ div {
     padding-bottom: 50rem;
 }
 
-@media (max-width: 768px) {
-    div {
-        width: 100%;
-    }
-}
-
 h1 {
     padding: 1rem;
 }
@@ -72,8 +66,8 @@ a:hover > p {
     transform: scale(1.2);
 }
 
-/* Tablet view (less than 768px) */
-@media (max-width: 768px) {
+/* Tablet view (less than 1080px) */
+@media (max-width: 1080px) {
     h1 {
         font-size: 1.25rem;
     }
@@ -87,7 +81,18 @@ a:hover > p {
         padding: 0.5rem;
         font-size: 1rem;
     }
+    div {
+        padding: 0;
+    }
 }
+
+@media (max-width: 768px) {
+    div {
+        width: 100%;
+        padding: 0;
+    }
+}
+
 
 /* Mobile view (less than 480px) */
 @media (max-width: 480px) {
@@ -101,5 +106,8 @@ a:hover > p {
         font-size: 0.9rem;
         padding: 0.4rem;
         line-height: 1.5rem;
+    }
+    div {
+        padding: 0;
     }
 }

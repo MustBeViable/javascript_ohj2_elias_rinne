@@ -18,10 +18,10 @@ if (num > 1) {
 
 if (prime === true) {
   document.querySelector(
-          '#target').innerHTML = `Number ${num} is prime number`
+      '#target').innerHTML = `Number ${num} is prime number`;
 }
 
 if (prime === false) {
   document.querySelector(
-          '#target').innerHTML = `Number ${num} is not prime number`
+      '#target').innerHTML = `Number ${num} is not prime number`;
 }
