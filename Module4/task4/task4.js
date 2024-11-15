@@ -28,9 +28,16 @@ const SeriesINFO = (JSONFile) => {
   a.textContent = `Link to ${JSONFile[0].show.name} page`;
   article.appendChild(a);
   let img = document.createElement('img');
-  img.setAttribute('src', `${JSONFile[0].show.image?.medium || 'no image'}`);
-  img.setAttribute('alt', `${JSONFile[0].show.name}`);
-  article.appendChild(img);
+  if (JSONFile[0].show.image && JSONFile[0].show.image.medium) {
+    img.setAttribute('src', `${JSONFile[0].show.image.medium}`);
+    img.setAttribute('alt', `${JSONFile[0].show.name}`);
+    article.appendChild(img);
+  } else {
+    img.setAttribute('src',
+        'https://via.placeholder.com/210x295?text=Not%20Found');
+    img.setAttribute('alt', 'Show image not available');
+    article.appendChild(img);
+  }
   let div = document.createElement('div');
   div.innerHTML = JSONFile[0].show.summary;
   article.appendChild(div);
