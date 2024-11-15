@@ -8,6 +8,7 @@ const ChuckNorris = async () => {
     const JokeJSON = await response.json();
     p.textContent = JokeJSON.value;
     document.body.appendChild(p);
+    console.log(JokeJSON.value);
   }
   catch (error) {
     console.log(error.message)
