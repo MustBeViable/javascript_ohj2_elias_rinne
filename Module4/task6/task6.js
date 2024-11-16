@@ -2,10 +2,13 @@
 
 const search = document.querySelector('#target');
 
+const div = document.querySelector('div');
+
 search.addEventListener('submit', async (event) => {
   event.preventDefault();
+  div.innerHTML = '';
+  let article = document.createElement('article');
   const query = document.querySelector('#joke').value.trim();
-  console.log('t1');
   try {
     const response = await fetch(
         `https://api.chucknorris.io/jokes/search?query=${query}`);
@@ -13,14 +16,16 @@ search.addEventListener('submit', async (event) => {
     console.log(JokeJSON);
     if (JokeJSON.result.length >= 1) {
       for (let joke = 0; joke <= JokeJSON.result.length; joke++) {
-        let article = document.createElement('article');
         let p = document.createElement('p');
         p.textContent = `${joke+1}. ${JokeJSON.result[joke].value}`;
         article.appendChild(p);
-        document.body.appendChild(article)
+        div.appendChild(article)
       }
     } else {
+      let p = document.createElement('p');
       p.textContent = 'No results found. Try again!'
+      article.appendChild(p);
+      div.appendChild(article);
     }
   } catch (error) {
     console.log(error.message);
